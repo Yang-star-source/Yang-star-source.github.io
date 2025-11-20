@@ -1,9 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Chong Zi Yang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Yang-star-source</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* --- CSS STYLING STARTS HERE --- */
+        :root {
+            --bg-color: #0f172a;       /* Dark Blue/Black Background */
+            --card-bg: #1e293b;        /* Lighter Card Background */
+            --text-primary: #f8fafc;   /* White Text */
+            --text-secondary: #94a3b8; /* Grey Text */
+            --accent: #38bdf8;         /* Bright Blue Accent */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        
+        body { background-color: var(--bg-color); color: var(--text-primary); line-height: 1.6; }
+
+        /* Layout Containers */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 80px 0; }
+
+        /* Header / Nav */
+        header { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent); }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 100px 0; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero .subtitle { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 10px 25px; background: var(--accent); color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        /* --- THIS IS THE IMPORTANT PART FOR YOUR REPOS --- */
+        .projects-grid {
+            display: grid;
+            /* This line makes it responsive automatically */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .project-card h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .project-card p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; }
+        .tech-stack { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+        .tech-tag { background: #334155; color: var(--accent); padding: 4px 10px; font-size: 0.8rem; border-radius: 20px; }
+        .card-links a { color: var(--text-primary); text-decoration: none; margin-right: 15px; font-weight: bold; }
+        .card-links a:hover { color: var(--accent); }
+
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; color: var(--text-secondary); font-size: 0.9rem; border-top: 1px solid #334155; }
+        /* --- CSS STYLING ENDS HERE --- */
+    </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+
+    <div class="container">
+        <header>
+            <div class="logo">Yang-star-source</div>
+            <div class="socials">
+                <a href="https://github.com/Yang-star-source" target="_blank" style="color:white; font-size:1.5rem;"><i class="fab fa-github"></i></a>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1>Hello, I'm Yang.</h1>
+            <p class="subtitle">Developer & Tech Enthusiast</p>
+            <p style="max-width: 600px; margin: 0 auto 30px auto; color: #94a3b8;">
+                I build accessible, pixel-perfect, and performant web experiences. 
+                Below are some of the open-source projects I've been working on.
+            </p>
+            <a href="mailto:your-email@example.com" class="btn">Contact Me</a>
+        </section>
+
+        <section id="projects">
+            <h2 style="font-size: 2rem; border-left: 5px solid var(--accent); padding-left: 15px;">Featured Repositories</h2>
+            
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div>
+                        <h3>Project Name One</h3>
+                        <p>A brief description of what this repository does. Maybe it's a Python script, a web app, or a data analysis project.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                        </div>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/Yang-star-source/repo-name-1"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div>
+                        <h3>Project Name Two</h3>
+                        <p>Description of your second project. Notice how the grid aligns these automatically side-by-side.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="card-links">
+                        <a href="#"><i class="fab fa-github"></i> View Code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Yang-star-source. Built with GitHub Pages.</p>
+        </footer>
+    </div>
+
 </body>
 </html>
